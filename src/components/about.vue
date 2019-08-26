@@ -3,13 +3,13 @@
     
         <br />
         <br />
-        <div class="w3-container w3-center">
-          <h1>About me</h1>
-
-          <img src="../assets/1.jpg" class="w3-circle" alt="Alps" style="width:160px;" />
+        <div class="w3-container w3-center" data-aos="zoom-in">
+          <h1 class="zoom">About me</h1>
+          <br>
+          <img src="../assets/1.jpg" class="w3-circle " alt="Alps" style="width:160px;" />
           <hr />
           <h5>
-            <b>Name :</b>
+            <b >Name :</b>
             <span>Kieattisak Suparit</span>
           </h5>
           <h5>
@@ -46,18 +46,36 @@
           </h5>
           <br />
           <br />
-          <button class="w3-button w3-circle w3-teal w3-large w3-margin-right">
+          
+        </div>
+    <div class="w3-container w3-center">
+       <button class="w3-button w3-circle w3-teal w3-large w3-margin-right" data-aos="flip-right">
             <i class="fa fa-facebook"></i>
           </button>
-          <button class="w3-button w3-circle w3-teal w3-large w3-margin-right">
+          <button class="w3-button w3-circle w3-teal w3-large w3-margin-right" data-aos="flip-right">
             <i class="fa fa-twitter"></i>
           </button>
-          <button class="w3-button w3-circle w3-teal w3-large w3-margin-right">
+          <button class="w3-button w3-circle w3-teal w3-large w3-margin-right" data-aos="flip-right">
             <i class="fa fa-instagram"></i>
           </button>
-          <button class="w3-button w3-circle w3-teal w3-large">
+          <button class="w3-button w3-circle w3-teal w3-large" data-aos="flip-right">
             <i class="fa fa-github"></i>
           </button>
-        </div>
+
+    </div>
+  
     </div>
 </template>
+<style>
+  
+  .zoom {
+  transition: transform .2s;
+  
+}
+ .zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+</style>

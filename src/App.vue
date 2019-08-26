@@ -11,11 +11,12 @@
     <skills></skills>
     <about></about>
     <whatDo></whatDo>
+    <project></project>
     <br />
     <br />
     <br />
     <bottom></bottom>
-
+    
     <!-- <div id="logo">
       <img alt="Vue logo" src="./assets/logo.png" />
       <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -45,6 +46,9 @@ import skills from "./components/skills.vue";
 import work from "./components/work.vue";
 import bottom from "./components/bottom.vue";
 import whatDo from "./components/whatDo.vue";
+import project from "./components/project.vue";
+
+import AOS from 'aos';
 
 export default {
   name: "app",
@@ -57,11 +61,17 @@ export default {
     skills,
     work,
     bottom,
-    whatDo
+    whatDo,
+    project
   },
   mounted: function() {
     console.log("mou");
     // this.btnAxios();
+  },
+  created(){
+  AOS.init({
+    duration:1500,
+  })
   },
   data: function() {
     return {
@@ -124,12 +134,19 @@ export default {
   font-weight: 400;
 }
 
+h1 {
+  font-family: "Mitr", sans-serif;
+}
+h2 {
+  font-family: "Mitr", sans-serif;
+}
 h5 {
   font-family: "Mitr", sans-serif;
 }
 h6 {
   font-family: "Mitr", sans-serif;
 }
+
 
 .b {
   font-family: "Mitr", sans-serif;

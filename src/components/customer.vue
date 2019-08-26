@@ -1,6 +1,7 @@
 <template>
   <div>
     <main role="main">
+ 
       <div class="container marketing">
         <div class="row">
           <div class="col-lg-4">
@@ -14,8 +15,9 @@
               width="140"
               height="140"
             />
+            
             <h4 style="margin-top:20px;">Developer</h4>
-            <h2>Kieattisak Suparit</h2>
+            <h2 >Kieattisak Suparit</h2>
             <p>Hello every one I'm age 22, I'm from thailand, this first time my website resume</p>
             <p>
               <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
@@ -28,7 +30,7 @@
       <div class="container">
         <div class="w3-row w3-center">
           <div class="w3-col m4">
-            <h2>Programmming</h2>
+            <h2 class="zoom">Programmming</h2>
 
             <span class="w3-tag w3-green w3-round">HTML</span>
             <span class="w3-tag w3-green w3-round w3-margin">CSS</span>
@@ -38,12 +40,12 @@
                <span class="w3-tag w3-green w3-round w3-margin">Firebase</span>
           </div>
           <div class="w3-col m4">
-            <h2>Software</h2>
+            <h2 class="zoom">Software</h2>
             <h3 class="badge badge-info w3-medium w3-margin">GoogleApps</h3>
             <h3 class="badge badge-info w3-medium">Ms Office</h3>
           </div>
           <div class="w3-col m4">
-            <h2>Hardware</h2>
+            <h2 class="zoom">Hardware</h2>
             <h3 class="badge badge-primary w3-medium">Computer</h3>
             <h3 class="badge badge-primary w3-medium w3-margin">Network</h3>
             <h3 class="badge badge-primary w3-medium">Printer</h3>
@@ -62,6 +64,7 @@ export default {
       view: 0,
       skills: ["HTML", "Js", "TypeScript", "IonicFramwork", "PHP"],
       dataTest: []
+      
     };
   } //data
   /*  created(){
@@ -72,6 +75,8 @@ export default {
       console.log("DataTest: " + this.dataTest)
     })
   } */
+
+  
 };
 </script>
 
@@ -99,6 +104,16 @@ export default {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -0.05rem;
+}
+
+  .zoom {
+  transition: transform .2s;
+  
+}
+ .zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 }
 
 @import url("https://fonts.googleapis.com/css?family=Prompt&display=swap");

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <div class="w3-center">
-      <h1 class>Skills</h1>
+    <div class="w3-center" >
+      <h1 class="zoom">Skills</h1>
       <br />
     </div>
-    <div class="w3-container w3-row-padding w3-center">
+    <div class="w3-container w3-row-padding w3-center" data-aos="zoom-in">
       <div class="w3-col m3">
         <br />
         <img src="../assets/HTML.png" alt style="width:50%;max-width:400px" />
@@ -43,3 +43,15 @@
     </div>
   </div>
 </template>
+
+<style>
+    .zoom {
+  transition: transform .2s;
+  
+}
+ .zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+</style>

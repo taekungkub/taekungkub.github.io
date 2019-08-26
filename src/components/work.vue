@@ -2,7 +2,7 @@
     <div class="container">
         
         <div class="w3-row">
-          <div class="w3-container w3-half">
+          <div class="w3-container w3-half" data-aos="fade-right">
             <div class>
               <h1 class="w3-margin w3-opacity w3-center">
                 <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience
@@ -43,16 +43,15 @@
             >Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
           </div>
 
-          <div class="w3-col w3-container" style="width:50%">
+          <div class="w3-col w3-container" style="width:50%" data-aos="fade-left">
             <div class>
               <h1 class="w3-margin w3-opacity w3-center">
-                <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
+                <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
               </h1>
-              <hr />
             </div>
-          </div>
+         
 
-          <div class="w3-container w3-half">
+          <div class="w3-container">
             <h5 class="w3-opacity">
               <b>วิทยาลัยเทคโนโลยีสยามบริหารธุรกิจ SBAC (สะพานใหม่)</b>
             </h5>
@@ -80,5 +79,6 @@
             <h6 class="w3-opacity">ปริญญาตรี. เทคโนโลยีสารสนเทศ</h6>
           </div>
         </div>
+         </div>
     </div>
 </template>
