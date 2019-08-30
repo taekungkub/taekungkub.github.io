@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <!-- <navbar></navbar> -->
+    <navbar2></navbar2>
     <br>  
     <br>
   
@@ -12,6 +13,9 @@
     <about></about>
     <whatDo></whatDo>
     <project></project>
+    <br>
+    <br>
+    <bulma></bulma>
     <br />
     <br />
     <br />
@@ -41,14 +45,17 @@ import helloTest from "./components/helloTest.vue";
 import customer from "./components/customer.vue";
 
 import navbar from "./components/navbar.vue";
+import navbar2 from "./components/navbar2.vue";
 import about from "./components/about.vue";
 import skills from "./components/skills.vue";
 import work from "./components/work.vue";
 import bottom from "./components/bottom.vue";
 import whatDo from "./components/whatDo.vue";
 import project from "./components/project.vue";
+import bulma from "./components/bulma.vue";
 
 import AOS from 'aos';
+import 'bulma/css/bulma.css';
 
 export default {
   name: "app",
@@ -57,12 +64,14 @@ export default {
     helloTest,
     customer,
     navbar,
+    navbar2,
     about,
     skills,
     work,
     bottom,
     whatDo,
-    project
+    project,
+    bulma
   },
   mounted: function() {
     console.log("mou");
