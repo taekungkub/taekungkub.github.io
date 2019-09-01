@@ -4,6 +4,17 @@
     <navbar2></navbar2>
     <br>  
     <br>
+
+  <div class="container" v-for="friend,i in friends">
+
+    <div v-if="editFriend === friend.id">
+         <li class="list-group-item"><input class="w3-input w3-border w3-round" type="text" style="width:20%" v-model="friend.name" v-on:keyup.13="updateFriend(friend)"> <input class="w3-input w3-border w3-round" type="text" style="width:20%" v-model="friend.email" v-on:keyup.13="updateFriend(friend)"><button class="w3-button button round w3-small  w3-green" v-on:click="updateFriend(friend)">Save</button></li>
+    </div>
+
+    <div v-else>
+         <li class="list-group-item">{{friend.id}} : {{friend.name}}  {{friend.email}}   <button class="w3-button button round w3-small w3-red" v-on:click="deleteFriend(friend.id,i)">Delete</button><button class="w3-button button round w3-small w3-teal" v-on:click="editFriend = friend.id">Edit</button></li>
+    </div>
+  </div>
   
     <br />
     <br />
@@ -75,6 +86,12 @@ export default {
   },
   mounted: function() {
     console.log("mou");
+      fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json()) // response.json() returns a promise
+    .then((data) => {
+     this.friends = data;
+     console.log("I have friend " + this.friends)
+    })
     // this.btnAxios();
   },
   created(){
@@ -86,7 +103,9 @@ export default {
     return {
       count: 0,
       view: 0,
-      dataTest: []
+      dataTest: [],
+      editFriend: null,
+      friends: []
     };
   }, //data
 
@@ -117,7 +136,31 @@ export default {
     }, //w3_open
     w3_close:function(){
       mySidebar.style.display = "none";
-    } //w3_close
+    }, //w3_close
+
+    deleteFriend(id,i){
+       fetch('https://jsonplaceholder.typicode.com/users' + id,{
+         method: "DELETE"
+       })
+       .then(()=>{
+         this.friends.splice(i,1)
+         console.log("delete")
+       })
+    
+    },
+    updateFriend(friend){
+       fetch('https://jsonplaceholder.typicode.com/users' + friend.id, {
+         body: JSON.stringify(friend),
+         method: "PUT",
+         headers: {
+           "Content-Type" : "application/json",
+         },
+       })
+       .then(()=>{
+           this.editFriend = null;
+       })
+    }
+
   } //methods
 }; //export default
 </script>
