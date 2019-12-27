@@ -15,6 +15,7 @@
          <li class="list-group-item">{{friend.id}} : {{friend.name}}  {{friend.email}}   <button class="w3-button button round w3-small w3-red" v-on:click="deleteFriend(friend.id,i)">Delete</button><button class="w3-button button round w3-small w3-teal" v-on:click="editFriend = friend.id">Edit</button></li>
     </div>
   </div>
+  <div></div>
   
     <br />
     <br />
